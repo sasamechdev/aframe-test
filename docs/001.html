@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+	<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+	<style>
+		body {
+				overflow: hidden;
+		}
+	</style>
+	</head>
+	<body>
+		<a-scene id="ascene" cursor="fuse: false; rayOrigin:mouse">
+			<a-assets>
+				<img id="001" src="./img/001.jpeg">
+				<img id="000_thumb" src="./img/000_thumb.jpeg">
+			</a-assets>
+		
+			<a-entity id="rig" position="0 0 0">
+				<a-entity id="camera" camera look-controls></a-entity>
+			</a-entity>
+			<a-sky id="background" src="#001" color="#FFFFFF" radius="10" rotation="0 0 0" position="0 0 0"></a-sky>
+			<a-link href="./index.html" title="index" image="#000_thumb" position="6 0 -6" rotation="0 -45 0"></a-link>
+		</a-scene>
+		<script type="text/javascript" src="./index.js"></script>
+	</body>
+</html>
